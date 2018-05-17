@@ -11,7 +11,7 @@ interface PlayerDao {
     fun getPlayers():List<Player>
 
     @Query("select * from players where first_name=:firstName and last_name=:lastName")
-    fun getPlayerByName(firstName:String,lastName:String): Team
+    fun getPlayerByName(firstName:String,lastName:String): Player
 
 
     @Insert

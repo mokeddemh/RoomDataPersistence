@@ -6,11 +6,11 @@ import android.arch.persistence.room.PrimaryKey
 
 @Entity(tableName = "teams")
 data class Team(
-       // @PrimaryKey(autoGenerate = true)
-        @ColumnInfo(name = "team_id")
-        var teamId:Long,
         @ColumnInfo(name = "team_name")
         var teamName:String,
         var continent:String
-
-)
+) {
+        @PrimaryKey(autoGenerate = true)
+        @ColumnInfo(name = "team_id")
+        var teamId:Int?=null
+}

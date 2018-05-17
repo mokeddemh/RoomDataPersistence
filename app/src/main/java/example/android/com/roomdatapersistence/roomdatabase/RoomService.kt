@@ -6,7 +6,11 @@ import android.content.Context
 object RoomService {
 
     lateinit var context:Context
-    val sqliteDataBase:SQLiteDataBase by lazy {
-        Room.databaseBuilder(context,SQLiteDataBase::class.java,"db_teams")
-                .allowMainThreadQueries().build() }
+
+    val appDataBase: AppDataBase by lazy {
+        Room.databaseBuilder(context,AppDataBase::class.java,"dbteams").allowMainThreadQueries().build()
+    }
+
+
+
 }
